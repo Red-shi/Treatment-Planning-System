@@ -3,95 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timed Cards Opening Example</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .cards-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      width: 90%;
-      max-width: 1200px;
-    }
-    .card {
-      background-color: #1e1e1e;
-      border-radius: 12px;
-      overflow: hidden;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: transform 0.6s ease, opacity 0.6s ease;
-    }
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 16px;
-    }
-    .card-title {
-      font-size: 1.25rem;
-      margin: 0 0 8px 0;
-      color: #e91e63;
-    }
-    .card-text {
-      font-size: 1rem;
-      line-height: 1.4;
-      color: #ccc;
-    }
-  </style>
+  <title>Treatment Planning System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-black text-white font-sans">
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-10 py-6 border-b border-gray-700">
+    <div class="text-xl font-bold text-pink-400">TPS / SISTEM</div>
+    <nav class="space-x-8 text-sm">
+      <a href="#" class="hover:text-pink-400">Beranda</a>
+      <a href="#about" class="hover:text-pink-400">Tentang TPS</a>
+      <a href="#modules" class="hover:text-pink-400">Modul</a>
+      <a href="#qa" class="hover:text-pink-400">QA</a>
+      <a href="#contact" class="hover:text-pink-400">Kontak</a>
+    </nav>
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437m0 0L6.75 14.25h10.5l1.5-7.5H5.106m0 0l-.383-1.437m0 0L4.5 3.75M6.75 21h.008v.008H6.75V21zm10.5 0h.008v.008h-.008V21z"/>
+      </svg>
+    </div>
+  </header>
 
-  <div class="cards-container">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x150" alt="Contoh Gambar 1" />
-      <div class="card-content">
-        <h3 class="card-title">Modul Perhitungan Dosis</h3>
-        <p class="card-text">Menggunakan algoritma Monte Carlo untuk akurasi tinggi.</p>
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-between px-10 py-20">
+    <div class="max-w-lg">
+      <h1 class="text-5xl font-bold mb-6 text-pink-200">Treatment Planning <br> System (TPS)</h1>
+      <p class="text-gray-300 mb-6">
+        Sebuah perangkat lunak klinis yang digunakan untuk merencanakan terapi radiasi dengan presisi tinggi. 
+        Tujuannya adalah memastikan tumor mendapatkan dosis radiasi yang tepat, sekaligus meminimalkan paparan pada jaringan sehat.
+      </p>
+      <a href="#about" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold">Pelajari Lebih Lanjut</a>
+    </div>
+    <div class="mt-10 md:mt-0">
+      <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" alt="TPS Image" class="w-[400px] drop-shadow-lg">
+    </div>
+  </section>
+
+  <!-- About TPS -->
+  <section id="about" class="px-10 py-20 bg-gray-900 rounded-xl m-6">
+    <h2 class="text-3xl font-bold text-pink-300 mb-6">Apa itu Treatment Planning System?</h2>
+    <p class="text-gray-300 mb-4">
+      <b>Treatment Planning System (TPS)</b> adalah alat penting dalam radioterapi modern. 
+      Fungsi utamanya adalah menghitung dan mengoptimalkan distribusi dosis radiasi di tubuh pasien.
+    </p>
+    <ul class="list-disc list-inside text-gray-400 space-y-2">
+      <li>Import data citra medis: CT, MRI, atau PET.</li>
+      <li>Konturing tumor dan organ kritis.</li>
+      <li>Penentuan parameter radiasi: sudut, energi, dan teknik.</li>
+      <li>Perhitungan dosis dengan algoritma canggih (Monte Carlo, Convolution, Pencil Beam).</li>
+      <li>Optimisasi rencana untuk efektivitas maksimal dan risiko minimal.</li>
+      <li>Quality Assurance (QA) sebelum diterapkan pada pasien.</li>
+    </ul>
+  </section>
+
+  <!-- Featured Modules -->
+  <section id="modules" class="px-10 pb-20">
+    <h2 class="text-lg font-semibold mb-6">Modul Utama</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Item 1 -->
+      <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" alt="Dose Calc" class="w-24 mb-4">
+        <h3 class="text-xl font-bold text-pink-300 mb-2">Perhitungan Dosis</h3>
+        <p class="text-gray-400 mb-2">Simulasi akurat menggunakan algoritma Monte Carlo dan Convolution.</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/2983/2983022.png" alt="Image Fusion" class="w-24 mb-4">
+        <h3 class="text-xl font-bold text-pink-300 mb-2">Fusi Citra</h3>
+        <p class="text-gray-400 mb-2">Integrasi CT, MRI, dan PET untuk meningkatkan akurasi klinis.</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965879.png" alt="Plan QA" class="w-24 mb-4">
+        <h3 class="text-xl font-bold text-pink-300 mb-2">Quality Assurance</h3>
+        <p class="text-gray-400 mb-2">Verifikasi kualitas rencana dan pembuatan laporan otomatis.</p>
       </div>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/400x150" alt="Contoh Gambar 2" />
-      <div class="card-content">
-        <h3 class="card-title">Fusi Citra</h3>
-        <p class="card-text">Integrasi CT, MRI, dan PET agar hasil lebih optimal.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/400x150" alt="Contoh Gambar 3" />
-      <div class="card-content">
-        <h3 class="card-title">Quality Assurance</h3>
-        <p class="card-text">Verifikasi dan laporan otomatis sebelum penerapan.</p>
-      </div>
-    </div>
-    <!-- Tambahkan kartu lainnya sesuai kebutuhan -->
-  </div>
+  </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const cards = document.querySelectorAll(".card");
-      cards.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add("visible");
-        }, 200 * index); // setiap kartu muncul dengan delay 200ms dikali index
-      });
-    });
-  </script>
+  <!-- QA Section -->
+  <section id="qa" class="px-10 py-20 bg-gray-900 rounded-xl m-6">
+    <h2 class="text-3xl font-bold text-pink-300 mb-6">Quality Assurance (QA)</h2>
+    <p class="text-gray-300">
+      Sebelum rencana terapi diberikan kepada pasien, TPS memiliki fitur <b>Quality Assurance</b> 
+      untuk memastikan bahwa perhitungan dosis dan rencana terapi sesuai dengan standar klinis 
+      dan aman untuk diterapkan.
+    </p>
+  </section>
 
+  <!-- Footer -->
+  <footer id="contact" class="text-center py-6 border-t border-gray-700 text-gray-400">
+    © 2025 Treatment Planning System - Dikembangkan oleh Tim TPS
+  </footer>
 </body>
 </html>
