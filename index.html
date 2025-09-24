@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +9,13 @@
 <body class="bg-black text-white font-sans">
   <!-- Navbar -->
   <header class="flex justify-between items-center px-10 py-6 border-b border-gray-700">
-    <div class="text-xl font-bold text-pink-400">TPS / MARKET</div>
+    <div class="text-xl font-bold text-pink-400">TPS / SISTEM</div>
     <nav class="space-x-8 text-sm">
-      <a href="#" class="hover:text-pink-400">Inicio</a>
-      <a href="#" class="hover:text-pink-400">Módulos</a>
-      <a href="#" class="hover:text-pink-400">Casos Clínicos</a>
-      <a href="#" class="hover:text-pink-400">Blog</a>
-      <a href="#" class="hover:text-pink-400">Contacto</a>
+      <a href="#" class="hover:text-pink-400">Beranda</a>
+      <a href="#about" class="hover:text-pink-400">Tentang TPS</a>
+      <a href="#modules" class="hover:text-pink-400">Modul</a>
+      <a href="#qa" class="hover:text-pink-400">QA</a>
+      <a href="#contact" class="hover:text-pink-400">Kontak</a>
     </nav>
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -29,49 +29,73 @@
     <div class="max-w-lg">
       <h1 class="text-5xl font-bold mb-6 text-pink-200">Treatment Planning <br> System (TPS)</h1>
       <p class="text-gray-300 mb-6">
-        Optimización de planes de tratamiento radioterápico con algoritmos avanzados.  
-        Tres modos de cálculo para mejorar la precisión clínica y la experiencia del paciente.
+        Sebuah perangkat lunak klinis yang digunakan untuk merencanakan terapi radiasi dengan presisi tinggi. 
+        Tujuannya adalah memastikan tumor mendapatkan dosis radiasi yang tepat, sekaligus meminimalkan paparan pada jaringan sehat.
       </p>
-      <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold">Ir a la Plataforma</a>
+      <a href="#about" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold">Pelajari Lebih Lanjut</a>
     </div>
     <div class="mt-10 md:mt-0">
       <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" alt="TPS Image" class="w-[400px] drop-shadow-lg">
     </div>
   </section>
 
+  <!-- About TPS -->
+  <section id="about" class="px-10 py-20 bg-gray-900 rounded-xl m-6">
+    <h2 class="text-3xl font-bold text-pink-300 mb-6">Apa itu Treatment Planning System?</h2>
+    <p class="text-gray-300 mb-4">
+      <b>Treatment Planning System (TPS)</b> adalah alat penting dalam radioterapi modern. 
+      Fungsi utamanya adalah menghitung dan mengoptimalkan distribusi dosis radiasi di tubuh pasien.
+    </p>
+    <ul class="list-disc list-inside text-gray-400 space-y-2">
+      <li>Import data citra medis: CT, MRI, atau PET.</li>
+      <li>Konturing tumor dan organ kritis.</li>
+      <li>Penentuan parameter radiasi: sudut, energi, dan teknik.</li>
+      <li>Perhitungan dosis dengan algoritma canggih (Monte Carlo, Convolution, Pencil Beam).</li>
+      <li>Optimisasi rencana untuk efektivitas maksimal dan risiko minimal.</li>
+      <li>Quality Assurance (QA) sebelum diterapkan pada pasien.</li>
+    </ul>
+  </section>
+
   <!-- Featured Modules -->
-  <section class="px-10 pb-20">
-    <h2 class="text-lg font-semibold mb-6">Módulos Destacados</h2>
+  <section id="modules" class="px-10 pb-20">
+    <h2 class="text-lg font-semibold mb-6">Modul Utama</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
       <!-- Item 1 -->
       <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition">
         <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" alt="Dose Calc" class="w-24 mb-4">
-        <h3 class="text-xl font-bold text-pink-300 mb-2">Cálculo de Dosis</h3>
-        <p class="text-gray-400 mb-2">Optimización con algoritmos Monte Carlo.</p>
-        <span class="text-pink-400 font-semibold">$199.00</span>
+        <h3 class="text-xl font-bold text-pink-300 mb-2">Perhitungan Dosis</h3>
+        <p class="text-gray-400 mb-2">Simulasi akurat menggunakan algoritma Monte Carlo dan Convolution.</p>
       </div>
 
       <!-- Item 2 -->
       <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition">
         <img src="https://cdn-icons-png.flaticon.com/512/2983/2983022.png" alt="Image Fusion" class="w-24 mb-4">
-        <h3 class="text-xl font-bold text-pink-300 mb-2">Fusión de Imágenes</h3>
-        <p class="text-gray-400 mb-2">CT, MRI y PET integrados para mayor precisión.</p>
-        <span class="text-pink-400 font-semibold">$249.00</span>
+        <h3 class="text-xl font-bold text-pink-300 mb-2">Fusi Citra</h3>
+        <p class="text-gray-400 mb-2">Integrasi CT, MRI, dan PET untuk meningkatkan akurasi klinis.</p>
       </div>
 
       <!-- Item 3 -->
       <div class="bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition">
         <img src="https://cdn-icons-png.flaticon.com/512/2965/2965879.png" alt="Plan QA" class="w-24 mb-4">
-        <h3 class="text-xl font-bold text-pink-300 mb-2">Plan QA</h3>
-        <p class="text-gray-400 mb-2">Evaluación de calidad y reportes automáticos.</p>
-        <span class="text-pink-400 font-semibold">$149.00</span>
+        <h3 class="text-xl font-bold text-pink-300 mb-2">Quality Assurance</h3>
+        <p class="text-gray-400 mb-2">Verifikasi kualitas rencana dan pembuatan laporan otomatis.</p>
       </div>
     </div>
   </section>
 
+  <!-- QA Section -->
+  <section id="qa" class="px-10 py-20 bg-gray-900 rounded-xl m-6">
+    <h2 class="text-3xl font-bold text-pink-300 mb-6">Quality Assurance (QA)</h2>
+    <p class="text-gray-300">
+      Sebelum rencana terapi diberikan kepada pasien, TPS memiliki fitur <b>Quality Assurance</b> 
+      untuk memastikan bahwa perhitungan dosis dan rencana terapi sesuai dengan standar klinis 
+      dan aman untuk diterapkan.
+    </p>
+  </section>
+
   <!-- Footer -->
-  <footer class="text-center py-6 border-t border-gray-700 text-gray-400">
-    © 2025 Treatment Planning System - Powered by TPS Team
+  <footer id="contact" class="text-center py-6 border-t border-gray-700 text-gray-400">
+    © 2025 Treatment Planning System - Dikembangkan oleh Tim TPS
   </footer>
 </body>
 </html>
